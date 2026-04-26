@@ -5,6 +5,11 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .listas {
@@ -38,4 +43,27 @@ img {
     gap: 40px;
     align-items: center;
 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #367588;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
