@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    const botaoTema = document.getElementById("toggleTema");
+    const botaoTema = document.getElementById("toggleTheme");
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
     }
