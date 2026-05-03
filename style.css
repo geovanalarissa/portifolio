@@ -43,9 +43,23 @@ header {
     text-align: center;
 }
 
+@media (max-width: 600px) {
+  header {
+    min-height: 60px;
+    padding: 10px 16px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  header {
+    min-height: 80px;
+    padding: 16px 24px;
+  }
+}
+
 header img {
-    width: 140px;
-    height: 140px;
+    width: clamp(90px, 15vw, 140px);
+    height: clamp(90px, 15vw, 140px);
     border-radius: 50%;
     object-fit: cover;
     margin: 15px 0;
@@ -155,8 +169,6 @@ footer {
     }
 }
 
-
-
 .contatos {
     padding: 40px 20px;
 }
@@ -191,7 +203,6 @@ footer {
     width: 40px;
     height: 40px;
 }
-
 
 .form {
     display: flex;
