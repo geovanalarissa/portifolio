@@ -1,6 +1,40 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    document.getElementById("meuForm").addEventListener("submit", function(event) {
+    const botaoTema = document.getElementById("toggleTema");
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+
+  
+    botaoTema.addEventListener("click", function() {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+            botaoTema.textContent = "☀️ Modo Claro";
+        } else {
+            localStorage.setItem("theme", "light");
+            botaoTema.textContent = "🌙 Modo Escuro";
+        }
+    });const botaoTema = document.getElementById("toggleTema");
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    botaoTema.addEventListener("click", function() {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+            botaoTema.textContent = "☀️ Modo Claro";
+        } else {
+            localStorage.setItem("theme", "light");
+            botaoTema.textContent = "🌙 Modo Escuro";
+        }
+    });
+
+    document.getElementById("form").addEventListener("submit", function(event) {
         event.preventDefault();
 
         const nome = document.getElementById("nome").value.trim();
@@ -28,5 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
         mensagem.textContent = "Formulário enviado com sucesso!";
         mensagem.style.color = "green";
     });
+
 
 });
