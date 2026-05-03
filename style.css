@@ -67,3 +67,236 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #ccc;
+    --text: #111;
+    --card:#367588;
+    --accent: #367588; 
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #ffffff;
+    --card: #367588;
+    --accent: #4fa3ff; 
+}
+
+body {
+    background: var(--card);
+    color: var(--text);
+    transition: 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+}
+
+header {
+    width: 100%;
+    padding: 50px 20px;
+    background: var(--bg);
+    text-align: center;
+}
+
+header img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px 0;
+}
+
+.listas {
+
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.listas article {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.listas article:hover {
+    transform: translateY(-5px);
+}
+
+.listas h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.listas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.listas li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.listas li::before {
+    content: "•";
+    color: #367588;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
+img {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.icone-linkedin {
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
+    object-fit: cover;
+   
+}
+
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: var(--bg);
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+.contatos {
+    padding: 40px 20px;
+}
+
+.title-contato {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.links-contato {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.links-contato a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.links-contato a:hover {
+    transform: scale(1.05);
+}
+
+.links-contato img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+form {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #2b5e6d;
+    filter: brightness(1.1);
+}
