@@ -1,22 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     const botaoTema = document.getElementById("toggleTheme");
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark");
-    }
-
-  
-    botaoTema.addEventListener("click", function() {
-        document.body.classList.toggle("dark");
-
-        if (document.body.classList.contains("dark")) {
-            localStorage.setItem("theme", "dark");
-            botaoTema.textContent = "☀️ Modo Claro";
-        } else {
-            localStorage.setItem("theme", "light");
-            botaoTema.textContent = "🌙 Modo Escuro";
-        }
-    });const botaoTema = document.getElementById("toggleTema");
 
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
@@ -27,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (document.body.classList.contains("dark")) {
             localStorage.setItem("theme", "dark");
-            botaoTema.textContent = "☀️ Modo Claro";
+            botaoTema.textContent = "☀️";
         } else {
             localStorage.setItem("theme", "light");
-            botaoTema.textContent = "🌙 Modo Escuro";
+            botaoTema.textContent = "🌙";
         }
     });
 
